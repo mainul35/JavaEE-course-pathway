@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="basicapp" />
+        <module name="basic-app-maven-project" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="basicapp" target="1.5" />
+      <module name="basic-app-maven-project" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

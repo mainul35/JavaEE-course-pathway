@@ -1,10 +1,14 @@
-import org.springframework.jdbc.core.JdbcTemplate;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
 import java.sql.*;
 
-public class Main {
+public class Main extends Application{
 
     public static DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -32,10 +36,19 @@ public class Main {
 //        }
 
 
-        JdbcTemplate jdbcTemplate = new JdbcTemplate();
-        jdbcTemplate.setDataSource(dataSource());
+//        JdbcTemplate jdbcTemplate = new JdbcTemplate();
+//        jdbcTemplate.setDataSource(dataSource());
+//
+//        System.out.println(jdbcTemplate.queryForList("SELECT * FROM student").toString());
 
-        System.out.println(jdbcTemplate.queryForList("SELECT * FROM student").toString());
+        launch(args);
     }
 
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("StudentManagement.fxml"));
+        Scene scene = new Scene(root, 300, 275);
+        primaryStage.setTitle("Welcome to Java FX");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/basic-app-maven-project.iml" filepath="$PROJECT_DIR$/basic-app-maven-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day-3-basic-oop-concepts.iml" filepath="$PROJECT_DIR$/day-3-basic-oop-concepts.iml" />
     </modules>
   </component>
 </project>
