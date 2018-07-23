@@ -18,10 +18,10 @@ public class Problem_2 {
                 break;
             } else if(guessedNumber!=input){
                 if(i>2){
-                    int pickedRandMsg = rand.nextInt(2-1);
+                    int pickedRandMsg = rand.nextInt(2);
                     if(randomMessage[pickedRandMsg].contains("The number is in between")){
                         System.out.printf(randomMessage[pickedRandMsg], (guessedNumber-5), (guessedNumber+5));
-                    }else if(randomMessage[pickedRandMsg].contains("The number is dividable by")){
+                    } else {
                         for(int div = 2; div <6; div++){
                             if(guessedNumber%div==0){
                                 System.out.printf(randomMessage[pickedRandMsg], div);
